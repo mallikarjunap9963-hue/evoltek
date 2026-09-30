@@ -27,8 +27,7 @@ import {
   Scale,
   TrendingUp,
   Monitor,
-  Cpu,
-  Link2
+  Cpu
 } from 'lucide-react';
 
 export default function App() {
@@ -523,9 +522,8 @@ export default function App() {
         </section>
 
         {/* 5. INVESTMENT MODEL: COLLABORATION */}
-        <section className="bg-gradient-to-b from-[#f2faf2] via-white to-[#f4fbf4] rounded-3xl border border-emerald-200/80 p-6 sm:p-10 shadow-sm relative overflow-hidden space-y-8">
-          {/* Header */}
-          <div className="text-center space-y-1 relative z-10">
+        <section className="space-y-8 py-4">
+          <div className="text-center space-y-1">
             <div className="flex items-center justify-center gap-4 py-1">
               <div className="h-[2px] w-12 sm:w-20 bg-[#1a7d0d]" />
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#1a7d0d] tracking-wider uppercase text-center">
@@ -533,139 +531,77 @@ export default function App() {
               </h2>
               <div className="h-[2px] w-12 sm:w-20 bg-[#1a7d0d]" />
             </div>
-            <p className="text-xs sm:text-sm font-extrabold tracking-widest uppercase text-gray-600">
+            <p className="text-xs sm:text-sm font-extrabold tracking-widest uppercase text-gray-500">
               EVOLTEK &amp; INVESTOR – GROWING TOGETHER
             </p>
           </div>
 
-          {/* 3 Column Graphic: Left Circle (Evoltek Plaza) | Center 50%/50% Handshake | Right Circle (Investment Coins) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-6xl mx-auto my-4 relative z-10">
-
-            {/* Left Circle: EVOLTEK Charging Station Plaza */}
-            <div className="lg:col-span-5 flex justify-center items-center relative">
-              {/* Decorative background leaf/glow circles */}
-              <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-72 h-72 bg-emerald-200/40 rounded-full blur-2xl -z-10" />
-              
-              <div className="relative p-2 rounded-full border-4 border-[#1a7d0d] bg-white shadow-xl max-w-[280px] sm:max-w-[320px] w-full aspect-square group">
-                <div className="w-full h-full rounded-full overflow-hidden border-2 border-white shadow-inner">
-                  <img
-                    src="/evoltek_charging_plaza_circle.jpg"
-                    alt="Evoltek Charging Station Plaza"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
+          {/* Banner Pill: 50% EVOLTEK - Handshake Circle - 50% INVESTOR */}
+          <div className="max-w-3xl mx-auto flex items-center justify-center rounded-3xl shadow-sm border border-emerald-200/80 overflow-hidden bg-white">
+            {/* Left 50% EVOLTEK */}
+            <div className="w-1/2 bg-[#1a7d0d] py-7 sm:py-10 pl-4 sm:pl-8 pr-6 sm:pr-10 flex flex-col items-center justify-center text-white">
+              <span className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none">50%</span>
+              <span className="text-xs sm:text-base font-extrabold tracking-widest mt-2 uppercase text-emerald-100">EVOLTEK</span>
             </div>
 
-            {/* Center: 50% EVOLTEK | Handshake | 50% INVESTOR */}
-            <div className="lg:col-span-2 flex flex-col items-center justify-center text-center space-y-3 py-4 lg:py-0">
-              <div>
-                <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1a7d0d] tracking-tight leading-none block">
-                  50%
-                </span>
-                <span className="text-xs sm:text-sm font-extrabold tracking-widest text-[#1a7d0d] uppercase block mt-1">
-                  EVOLTEK
-                </span>
-              </div>
-
-              {/* Handshake Badge flanked by lines */}
-              <div className="flex items-center justify-center gap-3 my-2 w-full">
-                <div className="h-[2px] w-8 sm:w-12 bg-[#1a7d0d]" />
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-[#1a7d0d] bg-white flex items-center justify-center shadow-md shrink-0">
-                  <Handshake className="w-7 h-7 sm:w-8 sm:h-8 text-[#1a7d0d] stroke-[2]" />
-                </div>
-                <div className="h-[2px] w-8 sm:w-12 bg-[#1a7d0d]" />
-              </div>
-
-              <div>
-                <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1a7d0d] tracking-tight leading-none block">
-                  50%
-                </span>
-                <span className="text-xs sm:text-sm font-extrabold tracking-widest text-[#1a7d0d] uppercase block mt-1">
-                  INVESTOR
-                </span>
-              </div>
+            {/* Center Handshake Badge */}
+            <div className="-mx-8 sm:-mx-12 z-10 w-22 h-22 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-emerald-400/80 flex items-center justify-center shadow-lg shrink-0">
+              <Handshake className="w-11 h-11 sm:w-14 sm:h-14 text-[#1a7d0d] stroke-[2]" />
             </div>
 
-            {/* Right Circle: Investment Coins Growth */}
-            <div className="lg:col-span-5 flex justify-center items-center relative">
-              {/* Decorative background leaf/glow circles */}
-              <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-72 h-72 bg-emerald-200/40 rounded-full blur-2xl -z-10" />
-
-              <div className="relative p-2 rounded-full border-4 border-[#1a7d0d] bg-white shadow-xl max-w-[280px] sm:max-w-[320px] w-full aspect-square group">
-                <div className="w-full h-full rounded-full overflow-hidden border-2 border-white shadow-inner">
-                  <img
-                    src="/investment_growth_coins_circle.jpg"
-                    alt="Investment Growth Coins"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
+            {/* Right 50% INVESTOR */}
+            <div className="w-1/2 bg-[#eef8ed] py-7 sm:py-10 pr-4 sm:pr-8 pl-6 sm:pl-10 flex flex-col items-center justify-center text-[#1a7d0d]">
+              <span className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none">50%</span>
+              <span className="text-xs sm:text-base font-extrabold tracking-widest mt-2 uppercase text-[#1a7d0d]">INVESTOR</span>
             </div>
-
           </div>
 
-          {/* Bottom 5 Feature Columns */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-6 border-t border-emerald-200/60 max-w-6xl mx-auto divide-y sm:divide-y-0 sm:divide-x divide-emerald-200/60 relative z-10 text-center">
+          {/* 5 Key Feature Highlights Row */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-6 text-center max-w-5xl mx-auto">
 
-            <div className="flex flex-col items-center p-3 space-y-2">
-              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-100/80 border border-emerald-300/60 flex items-center justify-center text-[#1a7d0d] shadow-2xs">
-                <Link2 className="w-6 h-6 stroke-[2]" />
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-emerald-200 flex items-center justify-center text-[#1a7d0d] shadow-sm hover:scale-105 transition-transform">
+                <Coins className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.8]" />
               </div>
-              <h4 className="text-sm font-black text-[#1a7d0d]">
+              <span className="text-xs sm:text-base font-extrabold text-[#1a7d0d] leading-tight">
                 Shared<br />Investment
-              </h4>
-              <p className="text-xs text-gray-600 font-medium leading-relaxed max-w-[180px]">
-                You invest only half the cost, and Evoltek invests the other half.
-              </p>
+              </span>
             </div>
 
-            <div className="flex flex-col items-center p-3 space-y-2 pt-4 sm:pt-3">
-              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-100/80 border border-emerald-300/60 flex items-center justify-center text-[#1a7d0d] shadow-2xs">
-                <Settings className="w-6 h-6 stroke-[2]" />
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-emerald-200 flex items-center justify-center text-[#1a7d0d] shadow-sm hover:scale-105 transition-transform">
+                <Settings className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.8]" />
               </div>
-              <h4 className="text-sm font-black text-[#1a7d0d]">
+              <span className="text-xs sm:text-base font-extrabold text-[#1a7d0d] leading-tight">
                 Hassle-free<br />Maintenance
-              </h4>
-              <p className="text-xs text-gray-600 font-medium leading-relaxed max-w-[180px]">
-                Evoltek takes care of setup, operations and station maintenance.
-              </p>
+              </span>
             </div>
 
-            <div className="flex flex-col items-center p-3 space-y-2 pt-4 sm:pt-3">
-              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-100/80 border border-emerald-300/60 flex items-center justify-center text-[#1a7d0d] shadow-2xs">
-                <Scale className="w-6 h-6 stroke-[2]" />
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-emerald-200 flex items-center justify-center text-[#1a7d0d] shadow-sm hover:scale-105 transition-transform">
+                <Scale className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.8]" />
               </div>
-              <h4 className="text-sm font-black text-[#1a7d0d]">
+              <span className="text-xs sm:text-base font-extrabold text-[#1a7d0d] leading-tight">
                 Two Return<br />Options
-              </h4>
-              <p className="text-xs text-gray-600 font-medium leading-relaxed max-w-[180px]">
-                Choose between a percentage return or a fixed return.
-              </p>
+              </span>
             </div>
 
-            <div className="flex flex-col items-center p-3 space-y-2 pt-4 sm:pt-3">
-              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-100/80 border border-emerald-300/60 flex items-center justify-center text-[#1a7d0d] shadow-2xs">
-                <ShieldCheck className="w-6 h-6 stroke-[2]" />
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-emerald-200 flex items-center justify-center text-[#1a7d0d] shadow-sm hover:scale-105 transition-transform">
+                <ShieldCheck className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.8]" />
               </div>
-              <h4 className="text-sm font-black text-[#1a7d0d]">
+              <span className="text-xs sm:text-base font-extrabold text-[#1a7d0d] leading-tight">
                 Secure<br />Agreements
-              </h4>
-              <p className="text-xs text-gray-600 font-medium leading-relaxed max-w-[180px]">
-                Long-term agreement of 5 or 10 years, renewable.
-              </p>
+              </span>
             </div>
 
-            <div className="flex flex-col items-center p-3 space-y-2 pt-4 sm:pt-3 col-span-1 sm:col-span-3 lg:col-span-1">
-              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-100/80 border border-emerald-300/60 flex items-center justify-center text-[#1a7d0d] shadow-2xs">
-                <TrendingUp className="w-6 h-6 stroke-[2]" />
+            <div className="flex flex-col items-center space-y-3 col-span-2 sm:col-span-1">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-2 border-emerald-200 flex items-center justify-center text-[#1a7d0d] shadow-sm hover:scale-105 transition-transform">
+                <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.8]" />
               </div>
-              <h4 className="text-sm font-black text-[#1a7d0d]">
+              <span className="text-xs sm:text-base font-extrabold text-[#1a7d0d] leading-tight">
                 Transparency<br />with App
-              </h4>
-              <p className="text-xs text-gray-600 font-medium leading-relaxed max-w-[180px]">
-                Track your station's performance through the Evoltek mobile app.
-              </p>
+              </span>
             </div>
 
           </div>
