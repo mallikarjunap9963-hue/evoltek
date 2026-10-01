@@ -295,44 +295,44 @@ export default function App() {
 
         /* HOME 1: HERO DESIGN WITH hero 1.png BACKGROUND */
         <div className="relative w-full overflow-hidden bg-white">
-          <section className="relative w-full aspect-[1059/1485] sm:aspect-none sm:h-auto sm:min-h-[640px] lg:min-h-[720px] flex flex-col justify-start sm:justify-center pt-20 xs:pt-24 sm:pt-28 lg:pt-32 pb-4 sm:pb-8 px-4 sm:px-8 lg:px-12">
+          <section className="relative w-full aspect-[1059/1485] md:aspect-none md:h-screen md:min-h-[650px] lg:min-h-[720px] flex flex-col justify-start md:justify-center pt-20 xs:pt-24 md:pt-28 lg:pt-32 pb-4 md:pb-8 px-4 md:px-8 lg:px-12">
 
             {/* Background Image: Explicit Mobile (mobile version hero section.png) & Desktop (hero 1.png) */}
             <div className="absolute inset-0 z-0">
-              {/* Mobile Only Background Image (< 640px) */}
+              {/* Mobile Only Background Image (< 768px) */}
               <img
                 src="/mobile version hero section.png"
                 alt="EVOLTEK Mobile Hero Section"
-                className="block sm:hidden w-full h-full object-contain object-top"
+                className="block md:hidden w-full h-full object-contain object-top"
               />
 
-              {/* Desktop & Tablet Background Image (>= 640px) */}
+              {/* Desktop & Tablet Background Image (>= 768px) */}
               <img
                 src="/hero 1.png"
                 alt="EVOLTEK Desktop Hero Section"
-                className="hidden sm:block w-full h-full object-cover object-center sm:object-right-top"
+                className="hidden md:block w-full h-full object-cover object-right-top"
               />
             </div>
 
             {/* Left Content Column over the clean blue sky area */}
-            <div className="relative z-10 max-w-2xl space-y-2 xs:space-y-3 sm:space-y-6 pt-1 sm:pt-6">
-              <h1 className="font-black tracking-tight text-[#0a7a0e] drop-shadow-2xs sm:text-5xl lg:text-6xl sm:leading-tight">
+            <div className="relative z-10 max-w-2xl space-y-2 xs:space-y-3 md:space-y-6 pt-1 md:pt-6">
+              <h1 className="mobile-hero-title font-black tracking-tight text-[#0a7a0e] drop-shadow-2xs md:text-5xl lg:text-6xl md:leading-tight md:mt-0">
                 HIGHWAY CHARGING.<br />
                 HIGHWAY EXPERIENCE.
               </h1>
 
-              <p className="text-gray-800 text-[11px] xs:text-xs sm:text-xl font-bold leading-snug sm:leading-relaxed max-w-md">
+              <p className="text-gray-800 text-[11px] xs:text-xs md:text-xl font-bold leading-snug md:leading-relaxed max-w-md">
                 Charge your EV while you relax,refresh and explore.
               </p>
 
               {/* Action Buttons in ONE ROW on Mobile */}
-              <div className="flex flex-row items-center gap-2 sm:gap-4 pt-1 xs:pt-2 sm:pt-4 overflow-x-auto hide-scrollbar">
+              <div className="flex flex-row items-center gap-2 md:gap-4 pt-1 xs:pt-2 md:pt-4 overflow-x-auto hide-scrollbar">
                 <button
                   onClick={() => {
                     const el = document.getElementById('roi-calculator');
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-[#0a8020] hover:bg-[#076819] text-white font-extrabold text-[11px] xs:text-xs sm:text-base px-3.5 xs:px-4 sm:px-8 py-2 xs:py-2.5 sm:py-3.5 rounded-full flex items-center gap-1.5 xs:gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer shrink-0 whitespace-nowrap"
+                  className="bg-[#0a8020] hover:bg-[#076819] text-white font-extrabold text-[11px] xs:text-xs md:text-base px-3.5 xs:px-4 md:px-8 py-2 xs:py-2.5 md:py-3.5 rounded-full flex items-center gap-1.5 xs:gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer shrink-0 whitespace-nowrap"
                 >
                   <span>Explore Stations</span>
                   <span className="w-4 h-4 xs:w-5 xs:h-5 bg-white text-[#0a8020] rounded-full flex items-center justify-center shrink-0">
@@ -345,7 +345,7 @@ export default function App() {
                     const el = document.getElementById('roi-calculator');
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-white hover:bg-emerald-50 text-[#0a8020] border-2 border-[#0a8020] font-extrabold text-[11px] xs:text-xs sm:text-base px-3.5 xs:px-4 sm:px-8 py-2 xs:py-2.5 sm:py-3.5 rounded-full flex items-center gap-1.5 xs:gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer shrink-0 whitespace-nowrap"
+                  className="bg-white hover:bg-emerald-50 text-[#0a8020] border-2 border-[#0a8020] font-extrabold text-[11px] xs:text-xs md:text-base px-3.5 xs:px-4 md:px-8 py-2 xs:py-2.5 md:py-3.5 rounded-full flex items-center gap-1.5 xs:gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer shrink-0 whitespace-nowrap"
                 >
                   <span>Become an Investor</span>
                   <span className="w-4 h-4 xs:w-5 xs:h-5 bg-[#0a8020] text-white rounded-full flex items-center justify-center shrink-0">

@@ -35,8 +35,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Specific Responsiveness & Touch Adjustments */
 @media (max-width: 768px) {
-  /* Prevent text clipping and enforce fluid mobile sizing */
-  h1 {
+  /* Scope hero title changes ONLY to the mobile hero version */
+  .mobile-hero-title {
     font-size: clamp(2.0rem, 6vw, 2.5rem) !important;
     line-height: 1.25 !important;
     margin-top: 21px;
