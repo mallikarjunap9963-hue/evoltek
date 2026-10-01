@@ -1391,11 +1391,86 @@ export default function App() {
 
         {/* 7. EVOLTEK MOBILE APP SECTION - ATTACHED / OVERLAPPING FOOTER */}
         <section className="relative z-20 w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl mt-6 -mb-16 sm:-mb-24 lg:-mb-28 bg-white border border-emerald-100/80">
+          {/* Background Image Banner */}
           <img
             src="/cta section type.png"
             alt="EVOLTEK Mobile App Banner"
-            className="w-full h-auto object-contain rounded-2xl sm:rounded-3xl block"
+            className="w-full h-auto object-cover sm:object-contain rounded-2xl sm:rounded-3xl block min-h-[340px] sm:min-h-[400px]"
           />
+
+          {/* Middle Overlay Content */}
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 sm:px-12">
+            <div className="max-w-xs sm:max-w-md lg:max-w-xl space-y-3 sm:space-y-4 bg-white/70 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none p-3 sm:p-0 rounded-2xl">
+
+              {/* Main Project Headline */}
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight leading-tight">
+                Control & Track Your Stations <span className="text-[#008726] block sm:inline">On The Go</span>
+              </h2>
+
+              {/* Project Description */}
+              <p className="text-xs sm:text-base text-gray-700 font-semibold leading-relaxed hidden xs:block max-w-md mx-auto">
+                Monitor live charging sessions, daily revenues, session counts, and monthly analytics anytime, anywhere.
+              </p>
+
+              {/* Feature Tags in Balanced Row */}
+              <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+                <span className="bg-white/95 border border-emerald-200 text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-2xs flex items-center gap-1.5">
+                  <span className="text-amber-500">⚡</span> Live Session Analytics
+                </span>
+                <span className="bg-white/95 border border-emerald-200 text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-2xs flex items-center gap-1.5">
+                  <span className="text-emerald-600">💰</span> Instant Payouts
+                </span>
+                <span className="bg-white/95 border border-emerald-200 text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-2xs flex items-center gap-1.5">
+                  <span className="text-blue-500">🔔</span> 24/7 Monitoring
+                </span>
+              </div>
+
+              {/* Pure Crisp SVG Vector Store Buttons */}
+              <div className="flex flex-row items-center justify-center gap-3 pt-2">
+                {/* Google Play Button */}
+                <a
+                  href="#download-google-play"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById('roi-calculator');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-black hover:bg-gray-900 text-white rounded-xl px-4 sm:px-5 py-2.5 flex items-center gap-3 shadow-lg border border-gray-800 transition-all transform hover:-translate-y-0.5 hover:scale-105 cursor-pointer shrink-0"
+                >
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 shrink-0" viewBox="0 0 512 512">
+                    <path fill="#41A5EE" d="M325.8 256L88.5 18.8C81.8 12.1 73.1 8 63.4 8 43.9 8 28 23.9 28 43.4v425.2c0 19.5 15.9 35.4 35.4 35.4 9.7 0 18.4-4.1 25.1-10.8L325.8 256z"/>
+                    <path fill="#FFD400" d="M410.6 171.2l-84.8 84.8 84.8 84.8c12.2-7 20.4-20 20.4-34.8V206c0-14.8-8.2-27.8-20.4-34.8z"/>
+                    <path fill="#FF3333" d="M88.5 493.2L325.8 256 410.6 340.8l-272 157.1c-14.6 8.4-32.8 7.3-46.1-4.7z"/>
+                    <path fill="#4CAF50" d="M410.6 171.2L325.8 256 88.5 18.8c13.3-12 31.5-13.1 46.1-4.7l276 157.1z"/>
+                  </svg>
+                  <div className="text-left leading-none">
+                    <span className="block text-[9px] uppercase font-bold text-gray-400 tracking-wider mb-0.5">GET IT ON</span>
+                    <span className="block text-sm sm:text-base font-black text-white tracking-tight">Google Play</span>
+                  </div>
+                </a>
+
+                {/* Apple App Store Button */}
+                <a
+                  href="#download-app-store"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById('roi-calculator');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-black hover:bg-gray-900 text-white rounded-xl px-4 sm:px-5 py-2.5 flex items-center gap-3 shadow-lg border border-gray-800 transition-all transform hover:-translate-y-0.5 hover:scale-105 cursor-pointer shrink-0"
+                >
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 fill-white shrink-0" viewBox="0 0 384 512">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-14.7 69.5-34.3z"/>
+                  </svg>
+                  <div className="text-left leading-none">
+                    <span className="block text-[9px] uppercase font-bold text-gray-400 tracking-wider mb-0.5">Download on the</span>
+                    <span className="block text-sm sm:text-base font-black text-white tracking-tight">App Store</span>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
         </section>
 
       </main>
