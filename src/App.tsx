@@ -295,7 +295,7 @@ export default function App() {
 
         /* HOME 1: HERO DESIGN WITH hero 1.png BACKGROUND */
         <div className="relative w-full overflow-hidden bg-white">
-          <section className="relative w-full aspect-[1059/1485] md:aspect-none md:h-screen md:min-h-[650px] lg:min-h-[720px] flex flex-col justify-start md:justify-center pt-20 xs:pt-24 md:pt-28 lg:pt-32 pb-4 md:pb-8 px-4 md:px-8 lg:px-12">
+          <section className="relative w-full h-screen min-h-screen md:h-screen md:min-h-[650px] lg:min-h-[720px] flex flex-col justify-start md:justify-center pt-20 xs:pt-24 md:pt-28 lg:pt-32 pb-4 md:pb-8 px-4 md:px-8 lg:px-12">
 
             {/* Background Image: Explicit Mobile (mobile version hero section.png) & Desktop (hero 1.png) */}
             <div className="absolute inset-0 z-0">
@@ -303,7 +303,7 @@ export default function App() {
               <img
                 src="/mobile version hero section.png"
                 alt="EVOLTEK Mobile Hero Section"
-                className="block md:hidden w-full h-full object-contain object-top"
+                className="block md:hidden w-full h-full object-cover object-right-top"
               />
 
               {/* Desktop & Tablet Background Image (>= 768px) */}
