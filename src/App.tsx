@@ -295,45 +295,61 @@ export default function App() {
 
         /* HOME 1: HERO DESIGN WITH hero 1.png BACKGROUND */
         <div className="relative w-full overflow-hidden bg-white">
-          <section className="relative w-full h-screen min-h-screen sm:h-auto sm:min-h-[640px] lg:min-h-[720px] flex flex-col justify-center pt-24 pb-12 px-4 sm:px-8 lg:px-12">
+          <section className="relative w-full aspect-[1059/1485] sm:aspect-none sm:h-auto sm:min-h-[640px] lg:min-h-[720px] flex flex-col justify-start sm:justify-center pt-20 xs:pt-24 sm:pt-28 lg:pt-32 pb-4 sm:pb-8 px-4 sm:px-8 lg:px-12">
 
-            {/* Background Image: Responsive for Mobile (mobile version hero section.png) & Desktop (hero 1.png) */}
+            {/* Background Image: Explicit Mobile (mobile version hero section.png) & Desktop (hero 1.png) */}
             <div className="absolute inset-0 z-0">
-              <picture className="w-full h-full block">
-                <source media="(max-width: 639px)" srcSet="/mobile version hero section.png" />
-                <img
-                  src="/hero 1.png"
-                  alt="EVOLTEK Highway Charging Station Plaza"
-                  className="w-full h-full object-cover object-center sm:object-right-top"
-                />
-              </picture>
+              {/* Mobile Only Background Image (< 640px) */}
+              <img
+                src="/mobile version hero section.png"
+                alt="EVOLTEK Mobile Hero Section"
+                className="block sm:hidden w-full h-full object-contain object-top"
+              />
+
+              {/* Desktop & Tablet Background Image (>= 640px) */}
+              <img
+                src="/hero 1.png"
+                alt="EVOLTEK Desktop Hero Section"
+                className="hidden sm:block w-full h-full object-cover object-center sm:object-right-top"
+              />
             </div>
 
-            {/* Left Content Column over the clean white fog space */}
-            <div className="relative z-10 max-w-2xl space-y-5 sm:space-y-6 pt-6 sm:pt-12">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight bg-gradient-to-r from-[#1a7d0d] via-[#24a116] to-[#135d09] bg-clip-text text-transparent">
+            {/* Left Content Column over the clean blue sky area */}
+            <div className="relative z-10 max-w-2xl space-y-2 xs:space-y-3 sm:space-y-6 pt-1 sm:pt-6">
+              <h1 className="font-black tracking-tight text-[#0a7a0e] drop-shadow-2xs sm:text-5xl lg:text-6xl sm:leading-tight">
                 HIGHWAY CHARGING.<br />
                 HIGHWAY EXPERIENCE.
               </h1>
 
-              <p className="text-gray-700 text-base sm:text-xl font-semibold leading-relaxed">
-                Charge your EV while you relax,<br className="hidden sm:inline" />
-                refresh and explore.
+              <p className="text-gray-800 text-[11px] xs:text-xs sm:text-xl font-bold leading-snug sm:leading-relaxed max-w-md">
+                Charge your EV while you relax,refresh and explore.
               </p>
 
-              {/* Action Buttons Row */}
-              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
-                <button className="bg-[#1a7d0d] hover:bg-[#135d09] text-white font-bold text-sm sm:text-base px-7 sm:px-9 py-3 sm:py-3.5 rounded-full flex items-center gap-2 shadow-md transition-all transform hover:-translate-y-0.5 cursor-pointer">
+              {/* Action Buttons in ONE ROW on Mobile */}
+              <div className="flex flex-row items-center gap-2 sm:gap-4 pt-1 xs:pt-2 sm:pt-4 overflow-x-auto hide-scrollbar">
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('roi-calculator');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-[#0a8020] hover:bg-[#076819] text-white font-extrabold text-[11px] xs:text-xs sm:text-base px-3.5 xs:px-4 sm:px-8 py-2 xs:py-2.5 sm:py-3.5 rounded-full flex items-center gap-1.5 xs:gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer shrink-0 whitespace-nowrap"
+                >
                   <span>Explore Stations</span>
-                  <span className="w-5 h-5 bg-white text-[#1a7d0d] rounded-full flex items-center justify-center">
-                    <ChevronRight className="w-3.5 h-3.5 stroke-[3]" />
+                  <span className="w-4 h-4 xs:w-5 xs:h-5 bg-white text-[#0a8020] rounded-full flex items-center justify-center shrink-0">
+                    <ChevronRight className="w-3 h-3 xs:w-3.5 xs:h-3.5 stroke-[3]" />
                   </span>
                 </button>
 
-                <button className="bg-white hover:bg-emerald-50 text-[#1a7d0d] border-2 border-[#1a7d0d] font-bold text-sm sm:text-base px-7 sm:px-9 py-3 sm:py-3.5 rounded-full flex items-center gap-2 shadow-sm transition-all transform hover:-translate-y-0.5 cursor-pointer">
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('roi-calculator');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-white hover:bg-emerald-50 text-[#0a8020] border-2 border-[#0a8020] font-extrabold text-[11px] xs:text-xs sm:text-base px-3.5 xs:px-4 sm:px-8 py-2 xs:py-2.5 sm:py-3.5 rounded-full flex items-center gap-1.5 xs:gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer shrink-0 whitespace-nowrap"
+                >
                   <span>Become an Investor</span>
-                  <span className="w-5 h-5 bg-[#1a7d0d] text-white rounded-full flex items-center justify-center">
-                    <ChevronRight className="w-3.5 h-3.5 stroke-[3]" />
+                  <span className="w-4 h-4 xs:w-5 xs:h-5 bg-[#0a8020] text-white rounded-full flex items-center justify-center shrink-0">
+                    <ChevronRight className="w-3 h-3 xs:w-3.5 xs:h-3.5 stroke-[3]" />
                   </span>
                 </button>
               </div>
